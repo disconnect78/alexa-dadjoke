@@ -1,0 +1,15 @@
+{
+  "name": "alexa-dadjoke",
+  "version": "1.0.0",
+  "description": "Alexa skill to retrieve jokes from icanhazdadjoke.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stuart Adair",
+  "license": "ISC",
+  "dependencies": {
+    "ask-sdk": "^2.7.0",
+    "dadjokes-wrapper": "^0.1.4"
+  }
+}
