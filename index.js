@@ -6,6 +6,7 @@ const cardString = 'Dad Jokes'
 function getDadJoke () {
   const dj = new DadJokes()
   const joke = dj.randomJoke()
+
   return joke
 }
 
@@ -24,7 +25,7 @@ const LaunchRequestHandler = {
   }
 }
 
-const HelloWorldIntentHandler = {
+const DadJokeIntentHandler = {
   canHandle (handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
       handlerInput.requestEnvelope.request.intent.name === 'GetDadJokeIntent'
@@ -104,7 +105,7 @@ exports.handler = async function (event, context) {
     skill = Alexa.SkillBuilders.custom()
       .addRequestHandlers(
         LaunchRequestHandler,
-        HelloWorldIntentHandler,
+        DadJokeIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         SessionEndedRequestHandler
@@ -122,7 +123,7 @@ exports.handler = async function (event, context) {
 exports.handler = Alexa.SkillBuilders.custom()
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    DadJokeIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler)
